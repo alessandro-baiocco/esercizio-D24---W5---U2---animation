@@ -1,0 +1,63 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+#testoAlternato {
+  border: solid 2px black;
+}
+
+.parola {
+  animation: ruota 2s 2s infinite;
+  width: 100px;
+}
+
+main {
+  padding: 200px;
+}
+
+@keyframes ruota {
+  25% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.parole {
+  display: inline-block;
+}
+
+.primo {
+  animation: fadeIn 3s infinite both;
+}
+.secondo {
+  animation: fadeIn 5s infinite both;
+}
+.terzo {
+  animation: fadeIn 7s infinite both;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

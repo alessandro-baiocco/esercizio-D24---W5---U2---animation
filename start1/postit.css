@@ -1,0 +1,68 @@
+header {
+  min-height: 100px;
+  background-color: aqua;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.inMain {
+  display: flex;
+  margin-block: 100px;
+  justify-content: space-evenly;
+}
+.postit {
+  height: 200px;
+  width: 200px;
+  font-size: 20px;
+}
+.postit:hover {
+  animation: dritto 1.1s 0s both;
+  height: 200px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.primo {
+  background-color: beige;
+  rotate: 20deg;
+}
+.secondo {
+  background-color: blueviolet;
+  rotate: -10deg;
+}
+.terzo {
+  background-color: cadetblue;
+  rotate: 26deg;
+}
+.quarto {
+  background-color: brown;
+  rotate: -5deg;
+}
+.quinto {
+  background-color: chartreuse;
+  rotate: 18deg;
+}
+.sesto {
+  background-color: cornflowerblue;
+  rotate: -9deg;
+}
+.settimo {
+  background-color: rgb(165, 138, 42);
+  rotate: 6deg;
+}
+.ottavo {
+  background-color: darkolivegreen;
+  rotate: 10deg;
+}
+
+@keyframes dritto {
+  75% {
+    transform: scale(1.3);
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    rotate: 0deg;
+    transform: scale(1.4);
+    box-shadow: -5px 5px 15px 10px #000000;
+  }
+}
